@@ -1,0 +1,53 @@
+/* ============================================================================
+   AtmoPulse Design Tokens
+   ----------------------------------------------------------------------------
+   The single source of truth for color, type, and motion across AtmoApps
+   briefs. Every brief uses these same values.
+
+   Usage: the canonical copy lives here. A brief's published index.html keeps
+   these tokens inlined in its own :root block so the file stays self-contained
+   and portable. When you change a value here, carry it into the brief(s).
+   See the design-system README for the voice and usage rules.
+   ============================================================================ */
+
+:root{
+
+  /* --- Brand color --------------------------------------------------------
+     Teal is the one interactive accent: links, controls, active states, and
+     the "alive / healthy" signal in illustrations.
+     Gold is for rare callouts only (for example, a single emphasized phrase).
+     Red is NOT an AtmoApps brand color and is not used. */
+  --ap-teal:        #1b8c9c;
+  --ap-teal-deep:   #1b6e78;
+  --ap-teal-bright: #31a3b3;
+  --ap-gold:        #c9a961;
+
+  /* --- Surfaces -----------------------------------------------------------
+     Dark-first. --ap-bg is the page field; --ap-bg-2 is a slightly deeper
+     tone for recessed areas. */
+  --ap-bg:   #0c1a2f;
+  --ap-bg-2: #0a1526;
+
+  /* --- Foreground / text --------------------------------------------------
+     Three tiers of text contrast. Do not place read-critical text below
+     --ap-fg-3 (0.58 opacity); anything fainter is decorative only. */
+  --ap-fg:   #ffffff;
+  --ap-fg-2: rgba(255,255,255,0.80);
+  --ap-fg-3: rgba(255,255,255,0.58);
+
+  /* --- Dividers -----------------------------------------------------------
+     Hairline rules. Translucency over heavy borders or shadows. */
+  --ap-divider:   rgba(255,255,255,0.10);
+  --ap-divider-2: rgba(255,255,255,0.16);
+
+  /* --- Type ---------------------------------------------------------------
+     Archivo throughout. Light (300) for body, Black (900) for all-caps
+     eyebrows and labels. The brief loads Archivo from Google Fonts. */
+  --ap-font: "Archivo","Helvetica Neue",Arial,sans-serif;
+
+  /* --- Motion -------------------------------------------------------------
+     One easing curve. A hard-decelerating ease that reads as a crisp settle.
+     No bounce, no spring, no overshoot. */
+  --ap-ease: cubic-bezier(0.22,1,0.36,1);
+
+}
